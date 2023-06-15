@@ -4,7 +4,7 @@ import FriendsList from './components/FriendsList/FriendsList';
 import Transactions from './components/Transactions/Transactions';
 
 import './App.css';
-import user from './db/user.json';
+import user from './db/user.json'
 import data from './db/data.json';
 import friends from './db/friends.json';
 import transactions from './db/transactions.json';
@@ -31,7 +31,6 @@ function App() {
 
       <Transactions 
         items={transactions}
-        id={transactions.id}
       />
     </div>
   );

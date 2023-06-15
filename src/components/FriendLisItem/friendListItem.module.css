@@ -7,19 +7,17 @@
     margin-left: 10px;
 }
 
-.status.active {
+.online {
+    composes: status;
+    background: red;
+}
+
+.offline {
+    composes: status;
     background: green;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
 }
 
-.friend-list {
-    padding-left: 0;
-    padding-right: 0;
-}
-
-.friend-item {
+.friend_item {
     display: flex;
     flex-direction: row;
     align-items: center;

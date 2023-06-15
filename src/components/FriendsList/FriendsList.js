@@ -1,39 +1,30 @@
 import PropTypes from 'prop-types';
 import FriendListItem from '../FriendLisItem/FriendListItem';
 
-import './friendsList.css';
+import css from './friendsList.module.css';
 
-const FriendsList = (props) => {
-    const {friends} = props;
-
-    const friendList = friends.map((friend) => {
-        let className = 'status';
-        if(friend.isOnline) {
-            className += ' active';
-        }
-        return (
-            <div>
-                <FriendListItem 
-                    className={className} 
-                    avatar={friend.avatar} 
-                    name={friend.name}
-                />
-            </div>
-        )
-    })
-
-    console.log(friendList);
+const FriendsList = ({friends}) => {
 
     return (
-        <ul class="friend-list">
-            {/*<!-- Произвольное кол-во FriendListItem -->*/}
-            {friendList}
+        <ul className={css.friend_list}>
+            {friends.map(friend => (
+                <FriendListItem 
+                key={friend.id}
+                isOnline={friend.isOnline}
+                avatar={friend.avatar} 
+                name={friend.name}/>
+            ))}
         </ul>
     )
 };
 
 FriendsList.propTypes = {
-    friends: PropTypes.object,
+    friends: PropTypes.arrayOf(PropTypes.shape({
+        avatar: PropTypes.string.isRequired,
+        name: PropTypes.string.isRequired,
+        isOnline: PropTypes.bool.isRequired,
+        id: PropTypes.number.isRequired
+    })).isRequired,
 };
 
 export default FriendsList;
