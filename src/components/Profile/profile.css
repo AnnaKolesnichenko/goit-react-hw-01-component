@@ -1,0 +1,51 @@
+.description {
+    background-color: rgb(249, 243, 243);    
+    padding-top: 40px;
+    padding-bottom: 10px;
+    width: 300px;
+
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 4px 5px 10px rgba(0, 0, 0, .2);
+    font-family: 'Montserrat';
+    color: rgb(102, 94, 94);
+}
+
+.description img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.stats {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 300px;
+    padding-left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    box-shadow: 4px 5px 10px rgba(0, 0, 0, .2);
+}
+
+.stats li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: calc(100% / 3);
+    border: 1px solid rgb(244, 241, 241);
+    background-color: rgb(239, 232, 232);
+}
+
+.label,
+.quantity {
+    font-family: 'Montserrat';
+    font-size: 14px;
+    color: rgb(102, 94, 94);
+}

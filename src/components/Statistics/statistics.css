@@ -1,0 +1,43 @@
+.statistics {
+    margin-top: 50px;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 15px;
+    margin-top: 0;
+    box-shadow: 4px 5px 10px rgba(0, 0, 0, .2);
+}
+
+.stat-list {
+    list-style: none;
+    display: flex;
+    padding-left: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    text-transform: uppercase;
+    color: rgb(139, 133, 133);
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-align: center;
+    font-family: 'Montserrat';
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    width: calc(100%/4);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: 1px solid rgb(247, 245, 245);
+    box-shadow: none;
+}
+
+.label,
+.percentage {
+    font-family: 'Montserrat';
+    color: rgb(85, 81, 81);
+}
+
